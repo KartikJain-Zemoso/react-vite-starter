@@ -1,0 +1,24 @@
+import React from "react";
+import { Button as MuiButton, ButtonProps } from "@mui/material";
+
+interface ButtonType extends ButtonProps {
+  children: React.ReactNode;
+  variant?: "contained" | "outlined" | "text";
+  size?: "small" | "medium" | "large";
+  style?: React.CSSProperties;
+  className?: string;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
+  disabled?: boolean;
+}
+
+const Button: React.FC<ButtonType> = (props: ButtonType) => {
+  return (
+    <MuiButton
+      sx={{ opacity: props.disabled ? 0.56 : 1, textTransform: "capitalize" }}
+      {...props}
+    />
+  );
+};
+
+export default Button;
