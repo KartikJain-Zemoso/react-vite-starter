@@ -19,6 +19,5 @@ module.exports = {
     "array-callback-return": "off",
     "object-curly-spacing": ["warn", "always"],
     semi: "off",
-    "react-refresh/only-export-components": "warn",
   },
 };
